@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+    --main-color: #22254b;
+    --secondry-color: #373b69;
+}
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color);
+}
+
+header {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondry-color);
+}
+
+.search {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--secondry-color);
+    padding: 8px 16px;
+    border-radius:50px ;
+    color: #fff;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--main-color);
+}
+
+
+.movie {
+    background-color: var(--secondry-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    min-height: 85px;
+    max-height: 85px;
+}
+
+.movie-info .title {
+    letter-spacing: .5px;
+}
+
+.movie-info span {
+    background-color: var(--main-color);
+    padding: 8px;
+    color: lightgreen;
+    border-radius: 2px;
+    height: 40px;
+}
+
+
+.movie span.green {
+    color: lightgreen;
+}
+.movie span.orange {
+    color: orange;
+}
+.movie span.red {
+    color: red;
+}
+
+.movie-overview {
+    background-color: #fff;
+    padding: 14px;
+    position: absolute;
+    bottom: -120%;
+    right: 0;
+    left: 0;
+    max-height: 100%;
+    transition: all .3s ease-in;
+}
+
+.movie:hover .movie-overview {
+    bottom: 0;
+}
+
+
+#item {
+    width: 50%;
+    list-style: none;
+}
+
+#item li {
+    margin: 0px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: all .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item li:hover {
+    background-color: #7378c5;
+    border-radius: 50%;
+}
